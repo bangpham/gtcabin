@@ -5,7 +5,7 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
 
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   showLegend = true;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#5AA454', '#bc3c56', '#C7B42C', '#AAAAAA']
   };
   showLabels = true;
   explodeSlices = true;

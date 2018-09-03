@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+body, h1, h2, h3, p {
+  font-family: Verdana;
+  color: #dbd2c7;
+}
+
+svg.ngx-charts  {
+  width: 70%;
+}
+
+.mat-form-field {
+ margin-right: 5px;
+}
+
+.pie-label {
+  stroke: #dbd2c7;
+}

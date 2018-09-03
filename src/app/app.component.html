@@ -1,4 +1,3 @@
-
 <div class="split left">
   <div class="centered-left">
     <p class="banner-maintext">BikeCabin</p>
@@ -7,33 +6,44 @@
 </div>
 
 <div class="split right mat-app-background">
-  <div class="centered-right">
-    <mat-form-field>
+
+  <div class="info">
+    <p>Thu đến và đi như những gì đã sắp đặt. Nhân dịp Fall Break 2018, GT Bike ở Georgia Tech tổ chức 3 ngày họp mặt thường niên ở cabin Blue Ridge, GA. Mục đích là để chào mừng thành viên mới, họp mặt thành viên cũ và giao lưu gắn kết để xây dựng tềnh bạn, tềnh yêu và nhiều thứ tình nữa.</p>
+  </div>
+
+
+  <div class="graph-1">
+    <p><mat-form-field>
       <mat-select placeholder="Status" [(value)]="survey.status">
         <mat-option value="Single">Single</mat-option>
         <mat-option value="Taken">Taken</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field>
-      <mat-select placeholder="Gender" [(value)]="survey.gender">
-        <mat-option value="Male">Male</mat-option>
-        <mat-option value="Female">Female</mat-option>
-        <mat-option value="Other">Other</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="saveEntry()">Save Entry</button>
+      <mat-form-field>
+        <mat-select placeholder="Gender" [(value)]="survey.gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+          <mat-option value="Other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="saveEntry()">Submit</button>
 
-    <ngx-charts-pie-chart *ngIf = "chartdata"
-                          [view]="view"
-                          [scheme]="colorScheme"
-                          [results]="statusData"
-                          [legend]="showLegend"
-                          [explodeSlices]="explodeSlices"
-                          [labels]="showLabels"
-                          [doughnut]="doughnut"
-                          (select)="onSelect($event)">
-    </ngx-charts-pie-chart>
+      <ngx-charts-pie-chart *ngIf = "chartdata"
+                            [view]="view"
+                            [scheme]="colorScheme"
+                            [results]="statusData"
+                            [legend]="showLegend"
+                            [explodeSlices]="explodeSlices"
+                            [labels]="showLabels"
+                            [doughnut]="doughnut"
+                            (select)="onSelect($event)">
+      </ngx-charts-pie-chart>
+    </p>
   </div>
+
+
+
+
 </div>
 
 <!--The content below is only a placeholder and can be replaced.-->
