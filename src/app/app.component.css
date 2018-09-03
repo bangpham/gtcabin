@@ -1,0 +1,75 @@
+.body {
+  background-color: black;
+}
+
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+  background-image: url("src/assets/banner2.png");
+  /*height: 500px; !* You must set a specified height *!*/
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+}
+
+.centered-right {
+  /*background-color: #5a5c5e;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered-left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  text-align: center;
+  margin: 0;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.banner-maintext {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 80px;
+  background-color: black;
+  color: #dbd2c7;
+  opacity: .6;
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+.banner-subtext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: black;
+  margin: 0px;
+  text-shadow: .3px .3px .2px #dbd2c7;
+}
