@@ -80,7 +80,6 @@ export class AppComponent implements OnInit {
     age: 0,
     citizenship: '',
     major: '',
-    quote: ''
   }
 
   chartdata: boolean = false;
@@ -122,6 +121,8 @@ export class AppComponent implements OnInit {
   showYAxisLabel = true;
   yAxisLabel = 'đầu người';
 
+  num = 1;
+
 
   constructor(private vote: VoteService) {}
 
@@ -138,6 +139,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.num = 1;
     this.vote.getAllEntries().subscribe((results) => {
       this.chartdata = true;
       this.processData(results);
@@ -145,6 +147,20 @@ export class AppComponent implements OnInit {
   }
 
 
+  scrollDown(): void {
+    if (this.num === 6) {
+      let e = document.querySelector("#anchor-top");
+      this.num = 1;
+      e.scrollIntoView({behavior: "smooth"});
+    } else {
+      const target = ".graph-";
+      const element = document.querySelector(target.concat(this.num.toString()));
+      console.log(element);
+      element.scrollIntoView({behavior: "smooth"});
+      this.num++;
+    }
+  }
+  
 
   processData(entries) {
     this.nameData = []

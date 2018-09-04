@@ -10,7 +10,7 @@
 </div>
 
 <div class="split right mat-app-background">
-  <a name="page-top"></a>
+  <a id="anchor-top"></a>
   <mat-tab-group>
     <mat-tab label="About" class="about-tab">
 
@@ -87,11 +87,11 @@
             <mat-select placeholder="Gender" [(value)]="survey.gender">
               <mat-option value="Male">Male</mat-option>
               <mat-option value="Female">Female</mat-option>
-              <mat-option value="Quá đáng lắm luôn á">Buê Đuê</mat-option>
+              <mat-option value="Ahihi">Ahihi</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="citizenship-form">
-            <mat-select placeholder="Màu Thẻ" [(value)]="survey.citizenship">
+            <mat-select placeholder="Quốc tịch" [(value)]="survey.citizenship">
               <mat-option value="Green">Xanh</mat-option>
               <mat-option value="Red">Đỏ</mat-option>
             </mat-select>
@@ -100,7 +100,7 @@
           <mat-form-field>
             <mat-select placeholder="Status" [(value)]="survey.status">
               <mat-option value="Single">Single</mat-option>
-              <mat-option value="Single có mục đích">Single no mingo</mat-option>
+              <mat-option value="Cố ý single">Single no mingo</mat-option>
               <mat-option value="Taken">Taken</mat-option>
             </mat-select>
           </mat-form-field>
@@ -184,11 +184,12 @@
           </div>
         </mat-card>
 
+        <div class="graph-6">
+        </div>
 
-        <div class="footer">
-          <a href="#page-top">
-            <mat-icon>arrow_upward</mat-icon>
-          </a>
+
+        <div class="scroller" (click)="scrollDown()">
+          <div>Click to Scroll</div>
         </div>
 
       </div>
