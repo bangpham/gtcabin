@@ -1,3 +1,7 @@
+<div>
+  <p class="banner-going">{{nameData.length}} going</p>
+</div>
+
 <div class="split left">
   <div class="centered-left">
     <p class="banner-maintext">BikeCabin</p>
@@ -6,45 +10,154 @@
 </div>
 
 <div class="split right mat-app-background">
+  <mat-tab-group>
+    <mat-tab label="About">
+      <div class="info">
+        <p>Thu đến và đi như những gì đã sắp đặt. Nhân dịp Fall Break 2018, GT Bike ở Georgia Tech tổ chức 3 ngày họp mặt thường niên ở cabin Blue Ridge, GA. Mục đích là để chào mừng thành viên mới, họp mặt thành viên cũ và giao lưu gắn kết để xây dựng tềnh bạn, tềnh yêu và nhiều thứ tình nữa.</p>
+      </div>
+    </mat-tab>
+    <mat-tab label="Location">
+      <div #gmap style=”width:100%;height:400px”></div>
 
-  <div class="info">
-    <p>Thu đến và đi như những gì đã sắp đặt. Nhân dịp Fall Break 2018, GT Bike ở Georgia Tech tổ chức 3 ngày họp mặt thường niên ở cabin Blue Ridge, GA. Mục đích là để chào mừng thành viên mới, họp mặt thành viên cũ và giao lưu gắn kết để xây dựng tềnh bạn, tềnh yêu và nhiều thứ tình nữa.</p>
-  </div>
+
+      <div>
+        445 Virginia Drive, Blue Ridge, GA 30513
+        October 5th - 9th 2019
+
+      </div>
+    </mat-tab>
+    <mat-tab label="Media"> Content 3 </mat-tab>
+  </mat-tab-group>
 
 
-  <div class="graph-1">
-    <p><mat-form-field>
+  <mat-card class="form">
+    <mat-form-field>
+      <input matInput name="survey.name" type="text" placeholder="Tên"
+             [(ngModel)]="survey.name" required>
+      <mat-error>This field is required</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="major-form">
+      <mat-select placeholder="Major" [(value)]="survey.major">
+        <mat-option *ngFor="let major of majors" [value]="major.value">
+          {{major.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="age-form">
+      <mat-select placeholder="Năm sinh" [(value)]="survey.age">
+        <mat-option *ngFor="let year of years" [value]="year.value">
+          {{year.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="gender-form">
+      <mat-select placeholder="Gender" [(value)]="survey.gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+        <mat-option value="Quá đáng lắm luôn á">Buê Đuê</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="citizenship-form">
+      <mat-select placeholder="Màu Thẻ" [(value)]="survey.citizenship">
+        <mat-option value="Green">Xanh</mat-option>
+        <mat-option value="Red">Đỏ</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
       <mat-select placeholder="Status" [(value)]="survey.status">
         <mat-option value="Single">Single</mat-option>
+        <mat-option value="Single có mục đích">Single no mingo</mat-option>
         <mat-option value="Taken">Taken</mat-option>
       </mat-select>
     </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Gender" [(value)]="survey.gender">
-          <mat-option value="Male">Male</mat-option>
-          <mat-option value="Female">Female</mat-option>
-          <mat-option value="Other">Other</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <button mat-raised-button color="primary" (click)="saveEntry()">Submit</button>
+    <button mat-raised-button class="submit-button" color="primary" (click)="saveEntry()">Tao Đi !</button>
+  </mat-card>
 
+
+  <!--<mat-card>-->
+    <!--<div class="people" *ngFor="let people of nameData">-->
+      <!--{{people.name}}-->
+      <!--<div class="tooltiptext">Tooltip text</div>-->
+    <!--</div>-->
+  <!--</ma>-->
+
+  <div class="graph-1">
+    <p>
+      <ngx-charts-advanced-pie-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="genderData"
+        [gradient]="gradient"
+        (select)="onSelect($event)">
+      </ngx-charts-advanced-pie-chart>
+    </p>
+  </div>
+
+  <div class="graph-2">
+    <ngx-charts-pie-chart *ngIf = "chartdata"
+                          [view]="largeView"
+                          [scheme]="colorScheme"
+                          [results]="statusData"
+                          [legend]="showLegend"
+                          [legendTitle]="legendRelationship"
+                          [explodeSlices]="explodeSlices"
+                          [labels]="showLabels"
+                          [doughnut]="doughnutFalse"
+                          (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <div class="graph-3">
       <ngx-charts-pie-chart *ngIf = "chartdata"
-                            [view]="view"
+                            [view]="largeView"
                             [scheme]="colorScheme"
-                            [results]="statusData"
-                            [legend]="showLegend"
+                            [results]="majorData"
+                            [legendTitle]="legendMajor"
                             [explodeSlices]="explodeSlices"
                             [labels]="showLabels"
                             [doughnut]="doughnut"
                             (select)="onSelect($event)">
       </ngx-charts-pie-chart>
-    </p>
   </div>
 
+  <mat-card class="form-chart">
+    <div class="graph-4">
+      <ngx-charts-pie-grid
+        [view]="gridView"
+        [scheme]="colorScheme"
+        [results]="citizenshipData"
+        (select)="onSelect($event)">
+      </ngx-charts-pie-grid>
+    </div>
+  </mat-card>
 
 
+  <ngx-charts-bar-vertical
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="ageData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    (select)="onSelect($event)">
+  </ngx-charts-bar-vertical>
+
+  <div class="footer">
+    <br>
+  </div>
 
 </div>
+
 
 <!--The content below is only a placeholder and can be replaced.-->
 

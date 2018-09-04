@@ -4,7 +4,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 //Material design
-import { MatSelectModule, MatButtonModule, MatRadioModule } from '@angular/material';
+import {
+  MatSelectModule, MatButtonModule, MatRadioModule, MatInputModule, MatCardModule,
+  MatTabsModule
+} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -31,11 +34,14 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     BrowserAnimationsModule,
     FormsModule,
     MatSelectModule,
+    MatInputModule,
+    MatCardModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.config),
     AngularFirestoreModule,
     MatRadioModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatTabsModule,
   ],
   providers: [
     VoteService

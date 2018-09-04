@@ -2,6 +2,25 @@
   background-color: black;
 }
 
+.form {
+  display: block;
+  margin-top: 20px;
+}
+
+.form-chart {
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mat-form-field {
+  display: block;
+  position: relative;
+  text-align: left;
+  padding: 0px 20px;
+  font-size: 14px;
+}
 
 /* Split the screen in half */
 .split {
@@ -42,7 +61,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -90%);
   text-align: center;
   margin: 0;
 }
@@ -70,14 +89,71 @@
   margin: 0px;
   text-shadow: .3px .3px .2px #dbd2c7;
 }
-.graph-1 {
-  width: 100%;
-  height: 450px;
+
+.banner-going {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #dbd2c7;
+  margin: 0px;
 }
 
+
 .info {
-  padding: 20px 20px;
+  padding: 20px 0px 0px 20px;
   text-align: center;
   width: 90%;
-  height: 200px;
+  height: 100px;
 }
+
+.major-form, .age-form, .gender-form, .citizenship-form {
+  width: 42%;
+  display: inline-block;
+}
+
+.age-form, .citizenship-form{
+  float: right;
+}
+
+.submit-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin:0 auto;
+  display:block;
+}
+
+.people {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: #BC3C56;
+  width: auto;
+  padding: 3px 5px;
+  border-radius: 25%;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.people .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  height: 200px;
+  background-color: #dbd2c7;
+  color: #dbd2c7;
+  text-align: center;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.people:hover .tooltiptext {
+  visibility: visible;
+}
+
+
