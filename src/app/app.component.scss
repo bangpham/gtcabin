@@ -148,11 +148,11 @@
   visibility: visible;
 }
 
-.location {
-  padding: 20px 0px 0px 20px;
+.location, .info {
+  padding: 25px 0px 0px 20px;
   text-align: center;
   width: 90%;
-  height: 100px;
+  height: 120px;
 }
 
 .location #date{
@@ -171,9 +171,8 @@
 }
 
 .info-card, .location-card {
-  margin-top:20px;
+  margin-top: 20px;
   height: auto;
-  overflow: scroll;
 }
 
 .graph-4-card {
