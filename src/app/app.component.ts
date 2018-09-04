@@ -11,36 +11,40 @@ import {IImage} from "ng-simple-slideshow";
 })
 export class AppComponent implements OnInit {
 
+  PIC_OWL: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/owl.png?alt=media&token=297d7ed2-fdb1-4418-b80d-4e000f27d3f3';
+  PIC_TUB: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/tub.png?alt=media&token=37f0f177-2273-4dec-8b69-0dfc7ea5729b';
+  PIC_TIENKHOA: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/tienkhoa.png?alt=media&token=f211ef81-50d8-47f0-a0af-c17ed8346d9b';
+  PIC_THANH: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/thanh.png?alt=media&token=a4f6fe91-aa3c-4eff-915f-fdd0393acb93';
+  PIC_UNICORN: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/unicorn.png?alt=media&token=63e3e6a7-ed43-428c-ad7d-1558feee9b19';
+  PIC_TRAI: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/trai.png?alt=media&token=aeb7aea8-ab38-4728-a7fa-41f7aaa8a162';
+  PIC_LES: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/les.png?alt=media&token=c4ab6647-d373-46ac-9b21-87c2b347b843';
+  PIC_GROUP: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/banner2.png?alt=media&token=b6d9e6bf-84ae-480d-94ec-d728cc7cd3a4';
+  PIC_GRAD: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/grad.png?alt=media&token=cf612ddd-3b73-4031-97f0-d655e5d55e7d';
+  PIC_GIRLS: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/girls.png?alt=media&token=da291ba7-1f48-4b0a-8e58-5c4e682ede33';
+  PIC_NHAN: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/nhan.png?alt=media&token=60a6212c-d1f9-40b5-93aa-3fdd5c747ada';
+  PIC_JACK: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/jack.png?alt=media&token=65c1495e-657c-49dc-820d-03f2bb063848';
+  PIC_FALL: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/fall2.png?alt=media&token=bb3a5fd6-f8df-4d67-88b4-c21893f967e7';
+  PIC_FROG: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/frog.png?alt=media&token=fe88c83e-cf1f-4a47-8abf-c77e1e0e6a26';
+
   legendMajor = "Major";
-  legendCitizenship = "Quốc tịch";
   legendRelationship = "Relationship Status"
 
   imageUrls: (string | IImage)[] = [
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/22404145_10210596031159264_184963952_o.jpg?alt=media&token=f44e4688-ca36-4faf-a064-4b2002c85cf1', caption: 'Cú', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/IMG_2601.JPG?alt=media&token=9285942e-f045-475e-8143-dc48fec01ce0', caption: 'anh Bồn và cái bồn', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/22291435_1939647496357737_6185736984346594365_o.jpg?alt=media&token=ddfbd85d-67d7-4bc7-b526-76abfa398328', caption: 'living room', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/22339143_1939649633024190_8014146916003366604_o.jpg?alt=media&token=d5ea6aab-b18d-4a51-a86e-de019ff9fcd1', caption: 'Thanh', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/22384084_1939648429690977_2093146188720706843_o.jpg?alt=media&token=b7d93ccd-fc19-4159-a6e8-0bfb9017fad3', caption: 'The lesbians', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/TN_Photo-1.JPG?alt=media&token=8a1624e8-54f4-4a69-8c44-9141e64c1528', caption: 'All together', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/TN_Photo-19.JPG?alt=media&token=b8a7d06a-9a90-4457-b166-0f2ff5772794', caption: 'Drunken unicorns', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/TN_Photo-27.JPG?alt=media&token=b0fd20c9-51ff-462a-8ee2-2547ee28e2f4', caption: 'Súc miệng đi ngủ', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/TN_Photo-3.JPG?alt=media&token=d4e9f901-ff13-4d32-9ac1-d97cfbcd9a6f', caption: 'Tien Khoa trước khi cãi nhau', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/TN_Photo-31.JPG?alt=media&token=10aee25c-6479-484a-aa73-8bd74132eb69', caption: 'Love at first and second ', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/22368774_10214565678040048_758058858_o.jpg?alt=media&token=9b8797ec-efd0-4113-b231-98d8328261d4', caption: 'Hoàng tử và cô ếch', href: '#config' },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/22425901_10210596030879257_446268355_o.jpg?alt=media&token=beb3f442-fe4e-4070-a503-f44c09a08332', caption: 'Ba bạn nữ', href: '#config'  },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/IMG_2645.JPG?alt=media&token=306e4590-0895-4aca-a8b7-c3dde0068ed6', caption: 'Thác ', href: '#config'  },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/IMG_2713.JPG?alt=media&token=a8e867b1-033c-469b-b688-82570f6abed3', caption: 'Ra trường', href: '#config'  },
-    { url: 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/IMG_2686.JPG?alt=media&token=70218044-97ff-4f0c-99e3-727417241c0e', caption: 'Những cô gái với những hình thù khác nhau', href: '#config'  }
+    { url: this.PIC_OWL, caption: 'Cú', href: '#config' },
+    { url: this.PIC_TUB, caption: 'anh Bồn và cái bồn', href: '#config' },
+    { url: this.PIC_NHAN, caption: 'living room', href: '#config' },
+    { url: this.PIC_THANH, caption: 'Thanh', href: '#config' },
+    { url: this.PIC_LES, caption: 'The lesbians', href: '#config' },
+    { url: this.PIC_GROUP, caption: 'All together', href: '#config' },
+    { url: this.PIC_UNICORN, caption: 'Drunken unicorns', href: '#config' },
+    { url: this.PIC_TRAI, caption: 'Súc miệng đi ngủ', href: '#config' },
+    { url: this.PIC_TIENKHOA, caption: 'Tien Khoa trước khi cãi nhau', href: '#config' },
+    { url: this.PIC_JACK, caption: 'Love at first and second ', href: '#config' },
+    { url: this.PIC_FROG, caption: 'Hoàng tử và cô ếch', href: '#config' },
+    { url: this.PIC_FALL, caption: 'Thác ', href: '#config'  },
+    { url: this.PIC_GRAD, caption: 'Ra trường', href: '#config'  },
+    { url: this.PIC_GIRLS, caption: 'Những cô gái với những hình thù khác nhau', href: '#config'  }
   ];
-
-//   imgSource: String[] = [
-//   "gs://gtcabin-eecbb.appspot.com/22404145_10210596031159264_184963952_o.jpg",
-//   "gs://gtcabin-eecbb.appspot.com/IMG_2601.JPG",
-//   "gs://gtcabin-eecbb.appspot.com/IMG_2603.JPG",
-//   "gs://gtcabin-eecbb.appspot.com/IMG_2624.JPG",
-//   "gs://gtcabin-eecbb.appspot.com/IMG_2645.JPG",
-//   "gs://gtcabin-eecbb.appspot.com/IMG_2713.JPG"
-// ];
 
   years: Year[] = [
     {value: '1989', viewValue: '1989'},
@@ -97,7 +101,7 @@ export class AppComponent implements OnInit {
   view: any[] = [600, 300];
   gridView: any[] = [600, 300];
   largeView: any[] = [700, 300];
-  smallView: any[] = [600, 250];
+  smallView: any[] = [400, 250];
 
 
   colorScheme = {
@@ -111,11 +115,8 @@ export class AppComponent implements OnInit {
   doughnut = true;
   doughnutFalse = false;
   gradient = false;
-  showLegend = true;
   showXAxis = true;
   showYAxis = true;
-  gradient = false;
-  showLegend = true;
   showXAxisLabel = true;
   xAxisLabel = 'Năm sinh ';
   showYAxisLabel = true;

@@ -9,7 +9,6 @@
 
 .form-chart {
   display: inline-block;
-  width: 90%;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -173,16 +172,81 @@
 
 .info-card, .location-card {
   margin-top:20px;
-  height: 120px;
+  height: auto;
+  overflow: scroll;
 }
 
-.line-chart-card {
-  padding-top: 30px;
-  height: 420px;
+.graph-4-card {
+  padding: 30px 0px 0px 0px;
+  height: auto;
+  width: 100%;
   display: inline-block;
-  width: 90%;
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+.graph-5-card {
+  padding-top: 30px;
+  height: auto;
+  max-height: 600px;
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+//center ngx-charts-advanced-pie-chart
+.graph-1 {
+  width: auto;
+  display: flex;
+  align-self: center;
+}
+
+.graph-1 .graph-1-inner {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+//center ngx-charts-advanced-pie-chart
+.graph-3 {
+  margin-top: 20px;
+  width: auto;
+  display: flex;
+  align-self: center;
+}
+
+.graph-3 .graph-3-inner {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+
+//center ngx-charts-advanced-pie-chart
+.graph-4 {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.graph-4 .graph-4-inner {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+//center ngx-charts-advanced-pie-chart
+.graph-5 {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.graph-5 .graph-5-inner {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+
+
 
 
