@@ -37,7 +37,7 @@
 .left {
   left: 0;
   background-color: #111;
-  background-image: url("src/assets/banner2.png");
+  background-image: url("src/assets/banner2.png"), url("https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/banner2.png?alt=media&token=b6d9e6bf-84ae-480d-94ec-d728cc7cd3a4");
   /*height: 500px; !* You must set a specified height *!*/
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -47,7 +47,7 @@
 /* Control the right side */
 .right {
   right: 0;
-  padding: 30px;
+  padding:0px 30px 30px 30px ;
 }
 
 .centered-right {
@@ -102,13 +102,6 @@
 }
 
 
-.info {
-  padding: 20px 0px 0px 20px;
-  text-align: center;
-  width: 90%;
-  height: 100px;
-}
-
 .major-form, .age-form, .gender-form, .citizenship-form {
   width: 42%;
   display: inline-block;
@@ -154,6 +147,42 @@
 
 .people:hover .tooltiptext {
   visibility: visible;
+}
+
+.location {
+  padding: 20px 0px 0px 20px;
+  text-align: center;
+  width: 90%;
+  height: 100px;
+}
+
+.location #date{
+  font-weight: bold;
+}
+
+.info {
+  padding: 0px 0px 0px 20px;
+  text-align: center;
+  width: 90%;
+  height: 120px;
+}
+
+.info p {
+  font-size: 16px;
+}
+
+.info-card, .location-card {
+  margin-top:20px;
+  height: 120px;
+}
+
+.line-chart-card {
+  padding-top: 30px;
+  height: 420px;
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 

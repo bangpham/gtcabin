@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 //Material design
 import {
   MatSelectModule, MatButtonModule, MatRadioModule, MatInputModule, MatCardModule,
-  MatTabsModule
+  MatTabsModule, MatIconModule
 } from '@angular/material';
 
 
@@ -24,6 +24,7 @@ import { VoteService } from './vote.service';
 
 //Ngx-Charts
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {SlideshowModule} from "ng-simple-slideshow";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,8 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     MatRadioModule,
     NgxChartsModule,
     MatTabsModule,
+    MatIconModule,
+    SlideshowModule
   ],
   providers: [
     VoteService
