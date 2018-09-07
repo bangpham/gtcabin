@@ -148,15 +148,30 @@
   visibility: visible;
 }
 
+.location-card {
+  background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),url("src/assets/mountain2.png");
+  //background-image: url("src/assets/mountain.png");
+  background-size: 100% 100%;
+}
+
 .location, .info {
   padding: 25px 0px 0px 20px;
   text-align: center;
   width: 90%;
-  height: 120px;
+  min-height: 150px;
 }
 
-.location #date{
+.location #date, #airbnb-detail, #direction-from-gt{
   font-weight: bold;
+  text-decoration: none;
+}
+
+#date {
+  font-size: 24px;
+}
+
+#direction-from-gt {
+  color: darkred;
 }
 
 .info {
@@ -168,6 +183,8 @@
 
 .info p {
   font-size: 16px;
+  font-weight: 100;
+  line-height: 1.8;
 }
 
 .info-card, .location-card {
