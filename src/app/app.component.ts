@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
   PIC_NHAN: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/nhan.png?alt=media&token=60a6212c-d1f9-40b5-93aa-3fdd5c747ada';
   PIC_JACK: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/jack.png?alt=media&token=65c1495e-657c-49dc-820d-03f2bb063848';
   PIC_FALL: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/fall2.png?alt=media&token=bb3a5fd6-f8df-4d67-88b4-c21893f967e7';
+  PIC_FALL3: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/fall3.png?alt=media&token=a15a17e4-8d58-42e3-9414-99994abbe042';
+  PIC_FIRE: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/fire.png?alt=media&token=3cec0fad-599b-41ac-be21-4907eb989c7a';
+  PIC_FLOWER: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/hoa.png?alt=media&token=d32c4c3d-ebc8-4768-9967-60c464e8a874';
   PIC_FROG: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/frog.png?alt=media&token=fe88c83e-cf1f-4a47-8abf-c77e1e0e6a26';
 
   legendMajor = "Major";
@@ -43,6 +46,9 @@ export class AppComponent implements OnInit {
     { url: this.PIC_FROG, caption: 'Hoàng tử và cô ếch', href: '#config' },
     { url: this.PIC_FALL, caption: 'Thác ', href: '#config'  },
     { url: this.PIC_GRAD, caption: 'Ra trường', href: '#config'  },
+    { url: this.PIC_FALL3, caption: 'Ra trường', href: '#config'  },
+    { url: this.PIC_FIRE, caption: 'Ra trường', href: '#config'  },
+    { url: this.PIC_FLOWER, caption: '', href: '#config'  },
     { url: this.PIC_GIRLS, caption: 'Những cô gái với những hình thù khác nhau', href: '#config'  }
   ];
 
@@ -160,7 +166,7 @@ export class AppComponent implements OnInit {
       this.num++;
     }
   }
-  
+
 
   processData(entries) {
     this.nameData = []

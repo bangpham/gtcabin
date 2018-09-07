@@ -42,8 +42,6 @@
           <a id="direction-from-gt" href="https://www.airbnb.com/rooms/22687095?checkin=2018-10-05&checkout=2018-10-07&source=handoff-ios&s=41&ref_device_id=5546c96bdbdb5c3e809d1ce87e0c091aa1be5a13&user_id=30075165&_branch_match_id=565052620375895185">DIRECTIONS FROM GT</a>
         </div>
       </mat-card>
-      <div class="bear-div"></div>
-
 
     </mat-tab>
     <mat-tab label="Media">
@@ -122,16 +120,18 @@
 
         <mat-card>
           <div class="graph-2">
-            <ngx-charts-pie-chart *ngIf = "chartdata"
-                                  [view]="largeView"
-                                  [scheme]="colorScheme"
-                                  [results]="statusData"
-                                  [legend]="showLegend"
-                                  [legendTitle]="legendRelationship"
-                                  [explodeSlices]="explodeSlices"
-                                  [labels]="showLabels"
-                                  [doughnut]="doughnutFalse">
-            </ngx-charts-pie-chart>
+            <div class="graph-2-inner">
+              <ngx-charts-pie-chart *ngIf = "chartdata"
+                                    [view]="gridView"
+                                    [scheme]="colorScheme"
+                                    [results]="statusData"
+                                    [legend]="showLegend"
+                                    [legendTitle]="legendRelationship"
+                                    [explodeSlices]="explodeSlices"
+                                    [labels]="showLabels"
+                                    [doughnut]="doughnutFalse">
+              </ngx-charts-pie-chart>
+            </div>
           </div>
         </mat-card>
 

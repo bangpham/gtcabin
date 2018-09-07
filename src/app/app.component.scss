@@ -226,7 +226,7 @@
 .graph-3 {
   margin-top: 20px;
   width: auto;
-  display: flex;
+  display: table;
   align-self: center;
 }
 
@@ -242,6 +242,19 @@
   width: 100%;
   display: flex;
   align-self: center;
+}
+
+.graph-2 .graph-2-inner {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.graph-2 {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  overflow: hidden;
 }
 
 .graph-4 .graph-4-inner {
