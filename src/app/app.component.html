@@ -32,28 +32,34 @@
       </div>
 
     </mat-tab>
-    <mat-tab class="location-tab" label="Location">
+    <mat-tab class="location-tab" label="Information">
 
       <mat-card class="location-card">
         <div class="location">
           <a id="airbnb-detail" href="https://www.airbnb.com/rooms/22687095?checkin=2018-10-05&checkout=2018-10-07&source=handoff-ios&s=41&ref_device_id=5546c96bdbdb5c3e809d1ce87e0c091aa1be5a13&user_id=30075165&_branch_match_id=565052620375895185">AirBnb  DETAIL INFORMATION</a>
           <br>
           <p id="date">October 5th - 9th 2019</p>
-          <a id="direction-from-gt" href="https://www.airbnb.com/rooms/22687095?checkin=2018-10-05&checkout=2018-10-07&source=handoff-ios&s=41&ref_device_id=5546c96bdbdb5c3e809d1ce87e0c091aa1be5a13&user_id=30075165&_branch_match_id=565052620375895185">DIRECTIONS FROM GT</a>
+          <a id="direction-from-gt" href="https://www.facebook.com/events/288302675335011/">FACEBOOK EVENT PAGE</a>
+          <p>*** NHỚ ĐEM ĐỒ BƠI (Jacuzzi, water Fall, hiking) ***</p>
         </div>
       </mat-card>
 
-    </mat-tab>
-    <mat-tab label="Media">
-      <slideshow [imageUrls]="imageUrls"></slideshow>
+      <mat-card class="people-card">
+        <div class="people" *ngFor="let people of surveyData">
+          <div class="people-name">{{people.name}}</div>
+          <div class="people-img" [ngStyle]="{ 'background-image': 'url(' + people.img + ')'}"></div>
 
-      <slideshow [minHeight]="'525px'"
-                 [autoPlay]="true"
-                 [showArrows]="false"
-                 [imageUrls]="imageUrls"
-                 [lazyLoad]="imageUrls?.length > 1"
-                 [autoPlayWaitForLazyLoad]="true">
-      </slideshow>
+          <div class="people-info">
+            Năm sinh: {{people.age}}
+            <br>
+            Status: {{people.status}}
+            <br>
+            Major: {{people.major}}
+          </div>
+
+        </div>
+      </mat-card>
+
     </mat-tab>
 
     <mat-tab label="Thống Kê">
@@ -137,18 +143,18 @@
 
         <div class="graph-3">
           <div class="graph-3-inner">
-              <ngx-charts-pie-chart *ngIf = "chartdata"
-                                    [view]="gridView"
-                                    [scheme]="colorScheme"
-                                    [results]="majorData"
-                                    [legend]="showLegend"
-                                    [legendTitle]="legendMajor"
-                                    [explodeSlices]="explodeSlices"
-                                    [labels]="showLabels"
-                                    [doughnut]="doughnut">
-              </ngx-charts-pie-chart>
-            </div>
+            <ngx-charts-pie-chart *ngIf = "chartdata"
+                                  [view]="gridView"
+                                  [scheme]="colorScheme"
+                                  [results]="majorData"
+                                  [legend]="showLegend"
+                                  [legendTitle]="legendMajor"
+                                  [explodeSlices]="explodeSlices"
+                                  [labels]="showLabels"
+                                  [doughnut]="doughnut">
+            </ngx-charts-pie-chart>
           </div>
+        </div>
 
         <mat-card class="graph-4-card">
           <div class="graph-4">
@@ -196,14 +202,19 @@
 
       </div>
     </mat-tab>
-  </mat-tab-group>
 
-  <!--<mat-card>-->
-    <!--<div class="people" *ngFor="let people of nameData">-->
-      <!--{{people.name}}-->
-      <!--<div class="tooltiptext">Tooltip text</div>-->
-    <!--</div>-->
-  <!--</ma>-->
+    <mat-tab label="Media">
+      <slideshow [imageUrls]="imageUrls"></slideshow>
+
+      <slideshow [minHeight]="'525px'"
+                 [autoPlay]="true"
+                 [showArrows]="false"
+                 [imageUrls]="imageUrls"
+                 [lazyLoad]="imageUrls?.length > 1"
+                 [autoPlayWaitForLazyLoad]="true">
+      </slideshow>
+    </mat-tab>
+  </mat-tab-group>
 
 </div>
 

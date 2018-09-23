@@ -44,12 +44,12 @@ export class AppComponent implements OnInit {
     { url: this.PIC_TIENKHOA, caption: 'Tien Khoa trước khi cãi nhau', href: '#config' },
     { url: this.PIC_JACK, caption: 'Love at first and second ', href: '#config' },
     { url: this.PIC_FROG, caption: 'Hoàng tử và cô ếch', href: '#config' },
-    { url: this.PIC_FALL, caption: 'Thác ', href: '#config'  },
-    { url: this.PIC_GRAD, caption: 'Ra trường', href: '#config'  },
-    { url: this.PIC_FALL3, caption: 'Ra trường', href: '#config'  },
-    { url: this.PIC_FIRE, caption: 'Ra trường', href: '#config'  },
-    { url: this.PIC_FLOWER, caption: '', href: '#config'  },
-    { url: this.PIC_GIRLS, caption: 'Những cô gái với những hình thù khác nhau', href: '#config'  }
+    { url: this.PIC_FALL, caption: 'Thác '},
+    { url: this.PIC_GRAD, caption: 'Ra trường'},
+    { url: this.PIC_FALL3, caption: ''},
+    { url: this.PIC_FIRE, caption: ''},
+    { url: this.PIC_FLOWER, caption: ''},
+    { url: this.PIC_GIRLS, caption: 'Những cô gái với những hình thù khác nhau'}
   ];
 
   years: Year[] = [
@@ -86,7 +86,10 @@ export class AppComponent implements OnInit {
     age: 0,
     citizenship: '',
     major: '',
+    img: ''
   }
+
+  surveyData;
 
   chartdata: boolean = false;
   nameCount = [];
@@ -149,6 +152,7 @@ export class AppComponent implements OnInit {
     this.vote.getAllEntries().subscribe((results) => {
       this.chartdata = true;
       this.processData(results);
+      this.surveyData = results;
     })
   }
 

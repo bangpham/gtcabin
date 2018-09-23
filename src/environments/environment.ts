@@ -3,9 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  config : {
+    apiKey: "AIzaSyCJvGRK6WqDwAID6a4Gt6bkM2QkTF9BiKs",
+    authDomain: "gtcabin-eecbb.firebaseapp.com",
+    databaseURL: "https://gtcabin-eecbb.firebaseio.com",
+    projectId: "gtcabin-eecbb",
+    storageBucket: "gtcabin-eecbb.appspot.com",
+    messagingSenderId: "437476699237"
+  }
 };
-
 /*
  * In development mode, for easier debugging, you can ignore zone related error
  * stack frames such as `zone.run`/`zoneDelegate.invokeTask` by importing the

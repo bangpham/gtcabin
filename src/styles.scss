@@ -1,19 +1,183 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 body, h1, h2, h3, p {
   font-family: Verdana;
   color: #dbd2c7;
 }
 
-svg.ngx-charts  {
-  width: 70%;
+/* unvisited link */
+a:link {
+  color: #BC3C56;
+}
+
+/* visited link */
+a:visited {
+  color: #BC3C56;
+}
+
+/* mouse over link */
+a:hover {
+  color: #BC3C56;
+}
+
+/* selected link */
+a:active {
+  color: #BC3C56;
+}
+
+p, body {
+  font-size: 14px;
+}
+
+.mat-app-background {
+  background-color: #2e2f30;
 }
 
 .mat-form-field {
  margin-right: 5px;
 }
 
-.pie-label {
-  stroke: #dbd2c7;
+.mat-input-element {
+  font-size: 16px;
 }
+
+.ngx-charts text { fill: #dbd2c7; }
+
+ngx-charts-legend.chart-legend {
+  width: auto;
+  clear: both;
+  & > div {
+    display:inline-block;
+    width: auto !important;
+  }
+  .legend-wrap {
+    text-align:center;
+  }
+  .legend-title{
+    display:none;
+  }
+  .legend-labels{
+    width: auto;
+  }
+}
+
+.scroller {
+  display: none;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #212121;
+  opacity: 0.6;
+  color: #dbd2c7;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+
+  .scroller {
+    height: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #212121;
+    opacity: 0.7;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scroller div {
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #dbd2c7;
+    opacity: 1;
+  }
+
+  body {
+    overflow: scroll !important;
+  }
+
+  .split .left{
+    display: none;
+    height: 100%;
+    width: 0 !important;
+  }
+
+  .split.right.mat-app-background {
+    righ: auto;
+    left: 0;
+    width: 100%;
+    padding: 0px 0px 0px 0px !important;
+  }
+
+
+  .split {
+    height: 100%;
+    width: 100% !important;
+    position: relative;
+    z-index: 0;
+    top: 0;
+    padding-top: 20px;
+  }
+
+  .form {
+    z-index: 0;
+  }
+
+  .info-card, .location-card {
+    margin-top:20px;
+    height: auto;
+    overflow: scroll;
+  }
+
+  .banner-going {
+    display: none;
+  }
+
+  .major-form, .age-form, .gender-form, .citizenship-form {
+    width: auto !important;
+  }
+
+  .graph-1, .graph-2, .graph-3, .graph-4, .graph-5 {
+    overflow: scroll !important;
+  }
+
+  .info {
+    max-height: 600px;
+    height: auto !important;
+  }
+
+  .location {
+    max-height: 600px;
+    height: auto !important;
+    padding: 20px 0px 20px 0px !important;
+  }
+
+  .location-card {
+    height: auto !important;
+  }
+
+}
+
+@media only screen and (max-width: 1260px) {
+   mat-card.form.mat-card {
+    display: grid;
+  }
+
+  .major-form, .age-form, .gender-form, .citizenship-form {
+    width: auto !important;
+  }
+}
+
+
+
+
