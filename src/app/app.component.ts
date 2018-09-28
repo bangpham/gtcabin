@@ -28,11 +28,13 @@ export class AppComponent implements OnInit {
   PIC_FIRE: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/fire.png?alt=media&token=3cec0fad-599b-41ac-be21-4907eb989c7a';
   PIC_FLOWER: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/hoa.png?alt=media&token=d32c4c3d-ebc8-4768-9967-60c464e8a874';
   PIC_FROG: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/frog.png?alt=media&token=fe88c83e-cf1f-4a47-8abf-c77e1e0e6a26';
+  PIC_TUB: string = 'https://firebasestorage.googleapis.com/v0/b/gtcabin-eecbb.appspot.com/o/thanhnina.png?alt=media&token=fc7e73c7-aac6-47db-bae8-fbb5426c81d1';
 
   legendMajor = "Major";
   legendRelationship = "Relationship Status"
 
   imageUrls: (string | IImage)[] = [
+    { url: this.PIC_TUB, caption: 'Đôi khi thấy em cười vui lòng anh xao xuyến', href: '#config' },
     { url: this.PIC_OWL, caption: 'Cú', href: '#config' },
     { url: this.PIC_TUB, caption: 'anh Bồn và cái bồn', href: '#config' },
     { url: this.PIC_NHAN, caption: 'living room', href: '#config' },
